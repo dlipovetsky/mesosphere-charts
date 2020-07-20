@@ -6,7 +6,7 @@ apiVersion: certmanager.k8s.io/v1alpha1
 kind: Issuer
 metadata:
   name: {{ .name }}
-  namespace: {{ .namespace }}
+  namespace: {{ $namespace }}
   annotations:
     "helm.sh/hook": post-install,post-upgrade
     "helm.sh/hook-weight": "-4"
